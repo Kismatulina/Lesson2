@@ -64,6 +64,19 @@ Console.Write(result);
 
 
 /*Console.Write(result);*/
+Console.Write("Введите трехзначное число");
+int number = int.Parse(Console.ReadLine());
+int result = number;
+ 
+if (number < 100 || number >=1000 )
+{ 
+  Console.WriteLine("Вы ввели не трехзначное число, пожалуйста повторите ввод");
+  return;
+}
+Console.WriteLine($"Введенное число '{number}'");
+int second_digit = number / 10 % 10;
+Console.WriteLine($"Вторая цифра '{second_digit}'");
+
 
 /*Задача 15: Напишите программу, которая принимает на вход цифру,
 обозначающую день недели, и проверяет, является ли этот день выходным.
