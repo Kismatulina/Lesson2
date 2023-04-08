@@ -11,7 +11,7 @@ number = int.Parse(input ("Введите трехзначное число" ));
 second_digit = (number % 100);
 print("Вторая цифра числа:", second_digit); //не правильно говорит*/
 
-Console.Write("Введите трехзначное число");
+/* Console.Write("Введите трехзначное число");
 number = int.Parse(Console.ReadLine());
 int result = number;
 return result;
@@ -22,8 +22,20 @@ if (number > 100 || number >=1000 )
   return;
 }
 int second_digit = number / 10 % 10;
-Console.WriteLine($"Вторая цифра {second_digit}");
-
+Console.WriteLine($"Вторая цифра {second_digit}");*/
+//int Promt(string messege)
+Console.Write("Введите трехзначное число");
+int number = int.Parse(Console.ReadLine());
+int result = number;
+ 
+if (number < 100 || number >=1000 )
+{ 
+  Console.WriteLine("Вы ввели не трехзначное число, пожалуйста повторите ввод");
+  return;
+}
+Console.WriteLine($"Введенное число '{number}'");
+int second_digit = number / 10 % 10;
+Console.WriteLine($"Вторая цифра '{second_digit}'");
 
 
 
